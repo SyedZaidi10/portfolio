@@ -1,0 +1,9 @@
+Drop your files here and they will be served from the site root.
+
+  profile.jpg   -> shown as your photo in the hero (already wired up)
+  resume.pdf    -> opened by the "Résumé" buttons (already wired up)
+
+Just save them with these exact names and refresh. If profile.jpg is
+missing, the hero falls back to your initials automatically.
+
+You can delete this file whenever you like.

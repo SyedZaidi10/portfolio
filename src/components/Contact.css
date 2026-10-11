@@ -1,0 +1,95 @@
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(40px, 7vw, 72px) clamp(24px, 6vw, 64px);
+  border-radius: var(--radius-lg);
+}
+
+.contact-glow {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 140%;
+  background: radial-gradient(circle, var(--accent-glow), transparent 62%);
+  filter: blur(40px);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.contact-card > *:not(.contact-glow) {
+  position: relative;
+}
+
+.contact-card .eyebrow {
+  justify-content: center;
+}
+
+.contact-heading {
+  font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+  color: #fff;
+  max-width: 18ch;
+  margin: 0 auto;
+}
+
+.contact-blurb {
+  color: var(--text-muted);
+  max-width: 52ch;
+  margin: 16px auto 0;
+  font-size: 1.05rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.contact-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-social {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: color 0.2s var(--ease), transform 0.25s var(--ease),
+    border-color 0.2s var(--ease);
+}
+
+.contact-social:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+}
+
+.contact-location {
+  font-size: 0.9rem;
+  color: var(--text-faint);
+  margin-left: 6px;
+}
+
+@media (max-width: 520px) {
+  .contact-actions {
+    flex-direction: column;
+  }
+  .contact-actions .btn {
+    width: 100%;
+  }
+}
